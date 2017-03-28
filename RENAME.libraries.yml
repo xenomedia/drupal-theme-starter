@@ -1,0 +1,9 @@
+global-styling:
+  version: 1.x
+  css:
+    base:
+      css/RENAME.css: {}
+  js:
+    js/RENAME.js: {}
+  dependencies:
+    - core/jquery

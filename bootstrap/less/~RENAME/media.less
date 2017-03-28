@@ -1,0 +1,35 @@
+.media {
+  position: relative;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+.align-center img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.media-image {
+
+  position: relative;
+
+  .caption {
+    background: rgba(0, 0, 0, 0.8) none repeat scroll 0 0;
+    bottom: 0;
+    color: #fff;
+    padding: 30px 30px 60px;
+    position: absolute;
+    transition: all 300ms ease-out 0s;
+    width: 100%;
+    z-index: 100;
+    opacity: 0;
+  }
+
+  .caption:hover {
+    opacity: 1;
+  }
+}

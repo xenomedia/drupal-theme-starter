@@ -1,0 +1,51 @@
+.navbar {
+  border-bottom: 1px solid @gray-lighter;
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  .navbar-brand {
+    height: auto;
+    margin-left: 0;
+    padding: 6px 0;
+
+    > img {
+      height: auto;
+      max-width: 220px;
+    }
+  }
+}
+
+.navbar-nav {
+
+  > li {
+    > a {
+      color: @gray-light;
+      text-transform: uppercase;
+    }
+  }
+}
+
+@media (min-width: @screen-md-min) {
+  .navbar-nav {
+    float: right;
+  }
+}
+
+.navbar-collapse.collapse.in,
+.navbar-collapse.collapsing {
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.12), inset 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.navbar-toggle {
+  border-radius: 2px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+  color: @gray-light;
+  margin-top: 4px;
+  text-transform: uppercase;
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}
+
+.navbar-toggle:hover {
+  box-shadow: inset 0 1px 3px rgba(0,0,0,0.12), inset 0 1px 2px rgba(0,0,0,0.24);
+  transition: all 0.3s cubic-bezier(.25,.8,.25,1);
+}

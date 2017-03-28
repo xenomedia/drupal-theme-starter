@@ -1,0 +1,45 @@
+/* Adds Dropddown menu back into Bootstrap */
+/* http://stackoverflow.com/questions/18023493/bootstrap-3-dropdown-sub-menu-missing */
+/* http://knackforge.com/blog/pathirakaliappan/create-multi-level-bootstrap-menu-in-Drupal-8 */
+/* Used in combination with menu--main.html.twig */
+/* Jim removed a bunch of stuff to just what he needed. */
+
+.dropdown-submenu {
+    position: relative;
+}
+
+.dropdown-submenu > .dropdown-menu {
+    top: 0;
+    left: 0;
+    padding: 0;
+}
+
+.dropdown-submenu:hover > .dropdown-menu {
+    display: block;
+}
+
+.dropdown-submenu.pull-left {
+    float: none;
+}
+
+.dropdown-submenu.pull-left > .dropdown-menu {
+    left: -100%;
+    margin-left: 10px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+}
+
+/* Disables, then adds the CSS Hover */
+/* Kind of from this URL, but had to mess with it a lot */
+/* http://stackoverflow.com/questions/27362584/changing-bootstrap-nav-menu-to-hover-and-retaining-parent-link */
+
+@media only screen and (min-width : 768px) {
+    .dropdown:hover .dropdown-menu > .dropdown-submenu > .dropdown-menu {
+        display: block;
+        position: relative;
+    }
+    .dropdown:hover .dropdown-menu {
+        display: block;
+    }
+}

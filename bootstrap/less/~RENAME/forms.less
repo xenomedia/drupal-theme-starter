@@ -1,0 +1,91 @@
+/* User login forms */
+#user-login-form,
+#user-pass {
+  margin-left: 25%;
+  padding: 0 40px 30px;
+  width: 50%;
+}
+
+/* Sets defaults */
+input[type="color"],
+input[type="email"],
+input[type="number"],
+input[type="password"],
+input[type="tel"],
+input[type="text"],
+input[type="url"],
+textarea {
+  border: 1px solid #ededed;
+  border-radius: 4px;
+  margin-bottom: 10px;
+  padding: 8px 12px;
+  width: 100%;
+}
+
+/* Exposed Views Form */
+.views-exposed-form {
+
+  /* Adds separation between filter of results */
+  .make-row();
+
+  /* Adds Columns */
+  .form-item {
+    .make-sm-column(12);
+    .make-md-column(5);
+  }
+
+  .form-actions {
+    .make-sm-column(12);
+    .make-md-column(2);
+    margin-top: 25px;
+    padding-left: 0;
+  }
+
+  @media only screen and (max-width: 768px) {
+
+    .form-actions {
+      margin-top: 0;
+      padding-left: 15px;
+    }
+  }
+
+  /* Adds Bootstrap styling to Apply button input */
+  .form-actions .button {
+    .btn();
+    .btn-sm();
+  }
+}
+
+.views-exposed-form + .views-infinite-scroll-content-wrapper {
+  border-top: 1px solid #808080;
+  padding-top: 10px;
+}
+
+/* Styling for the Div surrounding the select. Sets width, & hides overflow */
+/* Background image from core! */
+.select-style {
+  border: 1px solid #808080;
+  color: #808080;
+  width: 100%;
+  border-radius: 3px;
+  overflow: hidden;
+  background: #fff url("/core/misc/icons/333333/caret-down.svg") no-repeat 99% 50%;
+  float: left;
+  margin-bottom: 10px;
+}
+
+/* Styling for the select itself, extra width hides natural dropdown */
+.select-style select {
+  padding: 5px 8px;
+  width: 130%;
+  border: none;
+  box-shadow: none;
+  background: transparent;
+  background-image: none;
+  -webkit-appearance: none;
+}
+
+/* Removes focus outline for Firefox */
+.select-style select:focus {
+  outline: none;
+}
