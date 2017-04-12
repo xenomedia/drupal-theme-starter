@@ -19,7 +19,17 @@
  * @see field.html.twig
  */
 #}
+{%
+  set title_classes = [
+    'field__label',
+    label_display == 'visually_hidden' ? 'visually-hidden',
+  ]
+%}
+
 {% spaceless %}
+  {% if not label_hidden %}
+    <span{{ title_attributes.addClass(title_classes) }}>{{ label }}: </span>
+  {% endif %}
   {% if multiple %}
     {% for item in items %}
       {{ item.content }}
