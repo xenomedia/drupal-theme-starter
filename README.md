@@ -1,17 +1,25 @@
 
-# Xeno Media - Drupal 8 Theme Starter
+# Xeno Media - Demeter - Drupal 8 Theme Starter
 
-Xeno Media - A great place the start Drupal 8 theming.
+This is a starter Drupal 8 theme that uses the Bootstrap 3 Frontend Framework.
 
 ## Setup
 
 Make a copy of this theme and rename RENAME to your new theme name in these files:
 
-/d8-theme-starter/bootstrap/Gruntfile.js
-/d8-theme-starter/bootstrap/less/bootstrap.less
-/d8-theme-starter/RENAME.info.yml
-/d8-theme-starter/RENAME.libraries.yml
+- /bootstrap/Gruntfile.js
+- /bootstrap/less/bootstrap.less
+- /RENAME.info.yml
+- /RENAME.libraries.yml
 
-## How to theme
-- Run Grunt Watch on...
-- Then do the do...
+Rename the folder at:
+- /bootstrap/less/~RENAME/
+
+## Compile Bootstrap
+- cd into /bootstrap and run `npm install`
+- run `grunt dist` to compile
+- You can also run `grunt watch` to autocompile
+
+## Add LESS files
+- Add new less files you nees in /bootstrap/less/~NEWTHEMENAME/
+- Add them to be included in /bootstrap/less/bootstrap.less
