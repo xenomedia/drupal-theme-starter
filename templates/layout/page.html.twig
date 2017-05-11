@@ -45,7 +45,9 @@
 #}
 {% if page.header %}
   <nav class="navbar">
-    <div class="container">{{ page.header }}</div>
+    <div class="container">
+      {{ page.header }}
+    </div>
   </nav>
 {% endif %}
 <main class="container-fluid" id="main-content">
@@ -73,6 +75,6 @@
 </main>
 {% if page.footer %}
   <footer class="container-fluid">
-  	{{ page.footer }}
+    {{ page.footer }}
   </footer>
 {% endif %}
