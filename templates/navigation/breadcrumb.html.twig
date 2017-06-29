@@ -1,0 +1,28 @@
+{#
+/**
+ * @file
+ * Theme override for a breadcrumb trail.
+ *
+ * Available variables:
+ * - breadcrumb: Breadcrumb trail items.
+ */
+#}
+{% if breadcrumb %}
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList" class="breadcrumb">
+  {% for item in breadcrumb %}
+    <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
+      {% if item.url %}
+        <a itemprop="item" href="{{ item.url }}">
+          <span itemprop="name">{{ item.text }}</span>
+          <meta itemprop="position" content="{{ loop.index }}" />
+        </a>
+      {% else %}
+        <span itemprop="item">
+          <span itemprop="name">{{ item.text }}</span>
+          <meta itemprop="position" content="{{ loop.index }}" />
+        </span>
+      {% endif %}
+    </li>
+  {% endfor %}
+  </ol>
+{% endif %}
