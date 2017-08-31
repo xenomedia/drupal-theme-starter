@@ -8,7 +8,7 @@
  */
 #}
 {% if breadcrumb %}
-  <ol itemscope itemtype="http://schema.org/BreadcrumbList" class="breadcrumb">
+  <ol itemscope itemtype="http://schema.org/BreadcrumbList" class="breadcrumb" aria-label="breadcrumb">
   {% for item in breadcrumb %}
     <li itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
       {% if item.url %}
